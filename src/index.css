@@ -1,13 +1,255 @@
-body {
+html, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+*{
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+a {
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul{
+  list-style-type: none;
+}
+
+.app{
+  width: 1100px;
+  padding-top: 50px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+.header{
+  display: flex;
+  margin-bottom: 50px;
+}
+.header-marvel{
+  color: #000;
+  font-weight: 700;
+  font-size: 28px;
+  cursor: pointer;
+}
+.header-ul{
+  display: flex;
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+
+.randomchar{
+  display: flex;
+  padding-left: 40px;
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  margin-bottom: 50px;
+  width: 1135px;
+  height: 250px;
+}
+.randomchar-block{
+  display: flex;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  width: 550px;
+}
+.randomchar-block-thor{
+  margin-right: 30px;
+  height: 180px;
+  width: 180px; 
+}
+.randomchar-block-right{
+  text-align: left;
+  margin-right: 35px;
+}
+.randomchar-block-right-thor{
+  margin-bottom: 13px;
+}
+.randomchar-block-right-text{
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 13px;
+  max-width: 265px;
+}
+.randomchar-block-right-btn-homepage{
+  padding: 11px 18px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;    
+  background: #9f0013;
+  border: none;
+  margin-right: 30px;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+.randomchar-block-right-btn-homepage-a{
+  color: #fff;  
+}
+.randomchar-block-right-btn-homepage-second{
+  padding: 11px 37px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;    
+  background: #9f0013;
+  border: none;
+  background: #5c5c5c;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+.characters{
+cursor: pointer;
+}
+.comics{
+  cursor: pointer;
+}
+.randomchar-static{
+  background: #232222;
+  width: 550px;
+  position: relative;
+}
+.randomchar-static-section{
+  padding-top: 35px;
+  padding-left: 40px; 
+  text-align: left;
+}
+.randomchar-static-text{
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  width: 373px;
+  text-align: left;
+  margin-bottom: 41px;
+}
+.randomchar-static-btn{
+  cursor: pointer;
+  padding: 11px 18px;
+  background: #9f0013;
+   border: none;
+   clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.randomchar-static-btn-text{
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+ 
+}
+.randomchar-static-molot{
+  position: absolute;
+  top: 50px;
+  right: -20px;
+}
+
+.list-and-descr{
+  display: flex;
+  align-items: flex-start; /* Выравнивание по высоте контента */
+  
+}
+.list-ul{
+  width: 680px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.list-item{
+  background-color: #232222;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+  height: 318px;    /*  ТУТ */
+  width: 200px;
+  margin-right: 25px;
+  margin-bottom: 30px; 
+}
+.list-item-img{
+  margin-bottom: 15px;
+  height: 200px;
+  width: 200px;
+}
+.list-item-text{
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  width: 170px;
+  margin: 0 auto;
+  text-align: left;
+}
+.descr{
+  padding: 25px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  min-height: 300px;
+  min-width: 300px;
+}
+.hero-avatar{
+  margin-right: 25px;
+  margin-bottom: 15px;
+  height: 150px;
+  width: 150px;
+}
+.hero-name{
+  font-weight: 700;
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 38px;
+}
+.section{
+  text-align: left;
+}
+.hero-desct-text{
+  width: 375px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.comics-title{
+  text-align: left;
+  margin-bottom: 10px;
+}
+.comics-item{
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 375px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  margin-bottom: 10px;
+}
+comics-item:last-child{
+  margin-bottom: "30px"
+}
+.footer-bck-img{
+  position: absolute;
+  right: -174px;
+  bottom: -70px;
+  z-index: -1;
+}
+.footer-btn{
+  position: absolute;
+  padding: 11px 50px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;    
+  background-color: #9F0013;
+  border: none;   
+  margin-left: auto;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+.footer-btn:disabled{
+   filter: grayscale(50%);/* Позволяет затемнить кнопку, чтобы показать юзеру, что она нажата */
+}
+.char__item_selected{
+  box-shadow: 10px 10px 15px rgba(255, 0, 0, 0.5)
 }
