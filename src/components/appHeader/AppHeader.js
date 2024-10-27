@@ -1,12 +1,24 @@
+import { Link, NavLink} from "react-router-dom"
 const AppHeader = () => {
     return(
         <>
         <header className="header">
-        <a className="header-marvel" href="1"><span style={{color: '#9f0013'}}>Marvel</span> information portal</a>
+            {/* <a  className="header-marvel" href="1"> */}
+            <Link
+            className="header-marvel"
+            to="/"
+        >
+          Marvel
+        </Link>
+        <span className="header-marvel" > information portal</span>
             <ul className="header-ul">
-                <li style={{color:' #9f0013'}} className="characters">Characters</li>
+                <li className="characters"> <NavLink end to="/"   className={({ isActive, isPending }) =>
+    isPending ? "" : isActive ? "button-active" : ""
+  }>Characters</NavLink></li>
                 <li>/</li>
-                <li className="comics">Comics</li>
+                <li className="comics"><NavLink end to="/comics" className={({ isActive, isPending }) =>
+    isPending ? "" : isActive ? "button-active" : ""
+  }>Comics</NavLink></li>
             </ul>
     </header>
         </>

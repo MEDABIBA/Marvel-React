@@ -1,42 +1,34 @@
-import { Component } from "react"
-import AppHeader from "../appHeader/AppHeader"
-import RandomChar from "../randomChar/RandomChar"
-import CharList from "../charList/CharList"
-import CharInfo from "../charInfo/CharInfo"
-import ErrorBoundary from "../errorBoundary/ErrorBoundary"
+import { lazy, Suspense } from "react"
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
-import decoration from "../img/bg footer.svg"
-class Appp extends Component{
-    state = {
-        selectedChar: null
-    }
-    onCharSelected = (id) => {
-        this.setState({
-            selectedChar: id
-        })
-    }
-   render(){
-    return(
+import AppHeader from "../appHeader/AppHeader"
+import SingleComicsPage from "../pages/SingleComicsPage"
+import Spinner from "../spinner/Spinner"
+ const Appp = ()=>{
+    const MainPage = lazy(() => import('../pages/MainPage'));
+    const ComicsPage = lazy(() => import('../pages/ComicsPage'));
+    const Page404 = lazy(() => import('../pages/404'));
+    return(   
+        <Suspense fallback={<Spinner/>}>
+        <Router> 
         <div className="app">
         <AppHeader/>
         <main>
-            <ErrorBoundary>
-                <RandomChar/>
-            </ErrorBoundary>
-            <div className='list-and-descr'>
-                <ErrorBoundary> 
-                    <CharList onCharSelected={this.onCharSelected}/> 
-                </ErrorBoundary>
-                <ErrorBoundary>
-                    <CharInfo charId={this.state.selectedChar}/>
-                </ErrorBoundary>
-            </div>
-            <img src={decoration} alt="" className="footer-bck-img"/> 
+        <Routes>
+               <Route path="/comics" element={<ComicsPage/>}/>
+               <Route path="/" element={<MainPage/>}/>
+               <Route path="/comics/:comicID" element={<SingleComicsPage/>}/>
+               <Route path="*" element={<Page404/>}/>
+               
+        </Routes>
         </main>
         </div>
+        </Router>
+        </Suspense>  
+
         
     )
    }
-}
+
 
 export default Appp

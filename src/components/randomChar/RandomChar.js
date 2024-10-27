@@ -1,40 +1,28 @@
-import { Component } from "react"
-import MarvelService from "../../services/MarvelService";
+import {useState, useEffect} from "react"
+import useMarvelService from "../../services/MarvelService";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import Spinner from "../spinner/Spinner";
 import mjolnir from '../img/molot.png'
-class RandomChar extends Component {
-    state = {
-        char: {},
-        loading: true,
-        error: false
-    }
-     marvelService = new MarvelService();
-    componentDidMount(){
-        this.updateChar()
-    }
-     onChatLoaded = (char)=>{
-        this.setState({char: char, loading: false})
+const RandomChar = () => {
+    const [char, setChar] = useState({})
+
+    const {loading, error, getCharacter,  clearError} = useMarvelService();
+
+    useEffect(()=>{
+        updateChar()
+    }, [])
+     const onChatLoaded = (char)=>{
+        setChar(char)
      }
-     onChatLoading = (char)=>{
-        this.setState({loading: true})
-     }
-     onError = ()=>{
-        this.setState({loading: false, error: true})
-     }
-     updateChar = ()=>{
+     const updateChar = ()=>{
+        clearError();
         const id = Math.floor(Math.random() * (1011400 - 1011000) + 1011000)
-        this.marvelService
-        .getCharacter(id)
-        .then(this.onChatLoaded)
-        .catch(this.onError)
+        getCharacter(id)
+        .then(onChatLoaded)
      }
-     TryRandomBtn = ()=>{
-        this.onChatLoading()
-        this.updateChar()
+     const TryRandomBtn = ()=>{
+        updateChar()
      }
-    render(){
-        const {char, loading, error} = this.state;
         const Error = error ? <ErrorMessage/> : null;
         const spinner = loading ? <Spinner/> : null;
         const Content = !(loading || error) ? <View char={char}/> : null;
@@ -49,7 +37,7 @@ class RandomChar extends Component {
                         Do you want to get to know him better?
                     </h1>
                     <h1 className="randomchar-static-text" style={{marginBottom: '17px'}}>Or choose another one</h1>
-                    <button className="randomchar-static-btn"  onClick={this.TryRandomBtn}>
+                    <button className="randomchar-static-btn"  onClick={TryRandomBtn}>
                         <div className="randomchar-static-btn-text">TRY IT</div>
                     </button>
                     
@@ -58,7 +46,6 @@ class RandomChar extends Component {
             </div>
         </div>
         )
-    }
   
    
 }   

@@ -19,7 +19,6 @@ ul{
 .app{
   width: 1100px;
   padding-top: 50px;
-  justify-content: center;
   text-align: center;
   margin: 0 auto;
   min-height: 100vh;
@@ -104,6 +103,9 @@ ul{
 }
 .characters{
 cursor: pointer;
+} 
+.button-active{
+  color: #9f0013 !important;
 }
 .comics{
   cursor: pointer;
@@ -236,7 +238,6 @@ comics-item:last-child{
   z-index: -1;
 }
 .footer-btn{
-  position: absolute;
   padding: 11px 50px;
   font-weight: 400;
   font-size: 14px;
@@ -252,4 +253,134 @@ comics-item:last-child{
 }
 .char__item_selected{
   box-shadow: 10px 10px 15px rgba(255, 0, 0, 0.5)
+}
+
+
+
+.comics-every-week{
+  display: flex;
+  height: 100px;
+  width: 1100px;
+  background-color: #232222;
+  margin: auto;
+  padding-left: 45px;
+  margin-bottom: 50px;
+
+}
+.img-marvel-hero{
+  margin-right: 83px;
+}
+.comics-every-week-text{
+  margin-top: 18px;
+  color: #FFFFFF;
+}
+.img-marvel-avengers{
+margin-left: auto;
+margin-right: 25px;
+}
+.comics-every-week-left{
+  display: flex;
+  left: 0;
+}
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 67px;
+
+}
+.list-item2{
+  text-align: left;
+  max-width: 225px;
+  margin-right: 66px;
+  cursor: pointer;
+  margin-bottom: 55px;
+}
+.list-item2:nth-child(4n){
+  margin-right: 0;
+}
+.list-item2:nth-last-child(-n+4){
+  margin-bottom: 0;
+}
+.list-item-text2{
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+  max-width: 225px;
+  margin-bottom: 7px;
+}
+.list-item-price{
+  font-weight: 700;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.list-item2-img{
+  width: 225px;
+  height: 346px ;
+}
+.comics-descr{
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.comics-descr-img{
+  height: 450px;
+  width: 293px;
+  margin-right: 50px;
+}
+.comics-descr-right{
+  position: relative;
+  display: flex;
+  width: 753px;
+}
+.comics-descr-right-info{
+  text-align: left;
+}
+.comics-descr-right-title{
+  margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #000;
+}
+.comics-descr-right-text{
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 18px;
+  width: 550px;
+}
+.comics-descr-right-pages{
+  margin-bottom: 28px;
+  font-weight: 400;
+  font-size: 18px;
+}
+.comics-descr-right-language{
+  margin-bottom: 28px;
+  font-weight: 400;
+  font-size: 18px;
+}
+.comics-descr-right-price{
+  font-weight: 700;
+  color: #9f0013;
+  font-size: 24px;
+}
+.button-back{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: auto; 
+  font-weight: 700;
+  font-size: 18px;
+}
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
 }

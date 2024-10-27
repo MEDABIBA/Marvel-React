@@ -2,7 +2,7 @@ import Appp from './components/app/App';
 
 function App() {
   return (
-    <div className="app">
+    <div>
       <Appp/>
     </div>
   );

@@ -1,48 +1,29 @@
-import { Component } from "react"
+import {useState, useEffect} from "react"
 import PropTypes from "prop-types";
-import MarvelService from "../../services/MarvelService";
+import useMarvelService from "../../services/MarvelService";
 import Spinner from "../spinner/Spinner";
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import ErrorMessage from "../errorMessage/ErrorMessage";
-class CharInfo extends Component{
-        state = {
-            char: null,
-            loading: false,
-            error: false
-        }
-        marvelService = new MarvelService();
-        componentDidMount() {
-            this.updateChar();
-        }
-        componentDidUpdate(prevProps){
-            if (this.props.charId !== prevProps.charId) {
-                this.updateChar();
-            }
-        }
-        updateChar = () => {
-            const {charId} = this.props;
+const CharInfo = (props)=>{
+    const [char, setChar] = useState(null)
+    const {loading, error, getCharacter, clearError } = useMarvelService();
+    useEffect(()=>{
+        updateChar()
+        // eslint-disable-next-line
+    }, [props.charId])
+        const updateChar = () => {
+            clearError();
+        const {charId} = props;
             if (!charId) {
                 return;
             }
-    
-            this.onCharLoading();
-            this.marvelService
-                .getCharacter(charId)
-                .then(this.onCharLoaded)
-                .catch(this.onError);
+                getCharacter(charId)
+                .then(onCharLoaded)
         }
-         onCharLoaded = (char)=>{
-            this.setState({char: char, loading: false})
+         const onCharLoaded = (char)=>{
+            setChar(char)
          }
-         onCharLoading = ()=>{
-            this.setState({loading: true})
-         }
-         onError = ()=>{
-            this.setState({loading: false, error: true})
-         }
- render(){
-    const {char, loading, error} = this.state;
     const skeleton = !(char) ? (
                                     <>
                                     <h4>Please select a character to see information</h4>
@@ -62,7 +43,6 @@ class CharInfo extends Component{
         </div>
     
     )
- }
 
 }
 const View = ({char})=>{
