@@ -1,17 +1,18 @@
 import {useState, useEffect} from "react"
 import useMarvelService from "../../services/MarvelService";
-import ErrorMessage from "../errorMessage/ErrorMessage";
-import Spinner from "../spinner/Spinner";
+import setContent from "../../utils/SetContent";
 import mjolnir from '../img/molot.png'
 const RandomChar = () => {
     const [char, setChar] = useState({})
 
-    const {loading, error, getCharacter,  clearError} = useMarvelService();
+    const {getCharacter,  clearError,  process, setProcess} = useMarvelService();
 
     useEffect(()=>{
         updateChar()
+        // eslint-disable-next-line
     }, [])
      const onChatLoaded = (char)=>{
+        setProcess('succes')
         setChar(char)
      }
      const updateChar = ()=>{
@@ -23,14 +24,9 @@ const RandomChar = () => {
      const TryRandomBtn = ()=>{
         updateChar()
      }
-        const Error = error ? <ErrorMessage/> : null;
-        const spinner = loading ? <Spinner/> : null;
-        const Content = !(loading || error) ? <View char={char}/> : null;
         return(
             <div className="randomchar">
-                {Error}
-                {spinner}
-                {Content}
+                       {setContent(process, View, char)}
             <div className="randomchar-static">
                 <section className="randomchar-static-section">
                     <h1 className="randomchar-static-text">Random character for today!<br/>
@@ -49,8 +45,8 @@ const RandomChar = () => {
   
    
 }   
-const View = ({char})=>{
-    const {name, description, thumbnail, homepage, wiki} = char; 
+const View = ({data})=>{
+    const {name, description, thumbnail, homepage, wiki} = data; 
 
     return(
         <div className="randomchar-block">

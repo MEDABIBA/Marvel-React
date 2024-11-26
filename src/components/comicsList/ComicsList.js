@@ -32,7 +32,7 @@ const ComicsList = ()=>{
         return comics.map((item, i) =>{
             return(
                 <li className="list-item2" key={i}>
-                    <Link to={`/comics/${item.id}`}>
+                    <Link to={`/comics/${item.id}`}>    
                 <img src={item.thumbnail} alt="" className="list-item2-img"/>
                 <p className="list-item-text2">{item.title}</p>
                 <p className="list-item-price">{item.price}</p>
