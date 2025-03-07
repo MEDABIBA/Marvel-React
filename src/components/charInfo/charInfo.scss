@@ -1,0 +1,61 @@
+@use "../../styles/main.scss" as *;
+.descr {
+	padding: 25px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+	background: map-get($colors, "-white");
+	min-height: 300px;
+	min-width: 300px;
+	@include mb(30px);
+	.info-section {
+		display: flex;
+	}
+	.hero-avatar {
+		margin-right: 25px;
+		@include mb(15px);
+		height: 150px;
+		width: 150px;
+	}
+	.section {
+		text-align: left;
+
+		.hero-name {
+			font-weight: 700;
+			font-size: 22px;
+			color: map-get($colors, "-black");
+			margin-bottom: 38px;
+		}
+	}
+
+	.hero-desct-text {
+		width: 375px;
+		text-align: left;
+		font-weight: 400;
+		font-size: 14px;
+		color: map-get($colors, "-black");
+		@include mb(10px);
+	}
+	.comics {
+		cursor: pointer;
+
+		&-title {
+			text-align: left;
+			@include mb(10px);
+		}
+		&-item {
+			text-align: left;
+			padding-left: 10px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			width: 375px;
+			font-weight: 400;
+			font-size: 14px;
+			color: #000;
+			box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+			background: map-get($colors, "-white");
+			@include mb(10px);
+		}
+		&-item:last-child {
+			@include mb(30px);
+		}
+	}
+}

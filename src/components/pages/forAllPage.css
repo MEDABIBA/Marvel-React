@@ -1,0 +1,138 @@
+@charset "UTF-8";
+.footer-btn {
+  padding: 11px 50px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  background-color: #9f0013;
+  border: none;
+  margin-left: auto;
+  -webkit-clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+          clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+
+.footer-btn:disabled {
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%); /* Позволяет затемнить кнопку, чтобы показать юзеру, что она нажата */
+}
+
+.footer-bck-img {
+  position: absolute;
+  right: -174px;
+  bottom: -70px;
+  z-index: -1;
+}
+
+.randomchar-block-right-btn-homepage,
+.randomchar-block-right-btn-homepage:link {
+  padding: 11px 18px;
+  font-weight: 400;
+  font-size: 14px;
+  background: #9f0013;
+  color: #fff;
+  border: none;
+  margin-right: 30px;
+  -webkit-clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+          clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+
+.randomchar-block-right-btn-homepage-a {
+  color: white;
+}
+
+.randomchar-block-right-btn-homepage-second {
+  padding: 11px 37px;
+  font-weight: 400;
+  font-size: 14px;
+  background: #9f0013;
+  color: #fff;
+  border: none;
+  background: #5c5c5c;
+  -webkit-clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+          clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+
+.list-and-descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; /* Выравнивание по высоте контента */
+}
+
+.comics-descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.comics-descr-img {
+  height: auto;
+  width: 293px;
+  margin-right: 50px;
+}
+.comics-descr-right {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 753px;
+}
+.comics-descr-right-info {
+  text-align: left;
+}
+.comics-descr-right-title {
+  max-width: 550px;
+  margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #000;
+}
+.comics-descr-right-text {
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 18px;
+  width: 550px;
+}
+.comics-descr-right-pages {
+  margin-bottom: 28px;
+  font-weight: 400;
+  font-size: 18px;
+}
+.comics-descr-right-language {
+  margin-bottom: 28px;
+  font-weight: 400;
+  font-size: 18px;
+}
+.comics-descr-right-price {
+  font-weight: 700;
+  color: #9f0013;
+  font-size: 24px;
+}
+.comics-descr .button-back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.page-not-found {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.back-link {
+  display: "block";
+  text-align: "center";
+  font-weight: "bold";
+  font-size: "24px";
+  margin-top: "30px";
+}

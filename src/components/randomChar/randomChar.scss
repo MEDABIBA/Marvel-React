@@ -1,0 +1,84 @@
+@use "../../styles/main.scss" as *;
+
+.randomchar {
+  @include flex;
+  padding-left: 40px;
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.25);
+  background: map-get($colors, "-white");
+  @include mb(50px);
+  width: 1135px;
+  height: 250px;
+
+  .randomchar-block {
+    display: flex;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    width: 550px;
+    .randomchar-block-thor {
+      margin-right: 30px;
+      height: 180px;
+      width: 180px;
+    }
+    .randomchar-block-right {
+      text-align: left;
+      margin-right: 35px;
+
+      .randomchar-block-right-thor {
+        @include mb(13px);
+      }
+      .randomchar-block-right-text {
+        font-weight: 400;
+        font-size: 14px;
+        color: map-get($colors, "-black");
+        @include mb(13px);
+        max-width: 265px;
+      }
+    }
+  }
+
+  &-static {
+    background: map-get($colors, "-gray-black");
+    width: 550px;
+    position: relative;
+
+    &-section {
+      padding-top: 35px;
+      padding-left: 40px;
+      text-align: left;
+
+      .randomchar-static-text {
+        font-weight: 700;
+        font-size: 24px;
+        color: map-get($colors, "-white");
+        width: 373px;
+        text-align: left;
+        @include mb(41px);
+      }
+      .randomchar-static-btn {
+        cursor: pointer;
+        padding: 11px 18px;
+        background: map-get($colors, "-red");
+        border: none;
+        clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+
+        &-text {
+          font-weight: 400;
+          font-size: 14px;
+          text-align: center;
+          color: map-get($colors, "-white");
+        }
+      }
+      .randomchar-static-block {
+        @include flex;
+        @include mb(35px);
+        margin-top: 35px;
+        width: 550px;
+      }
+    }
+    .randomchar-static-molot {
+      position: absolute;
+      top: 50px;
+      right: -20px;
+    }
+  }
+}

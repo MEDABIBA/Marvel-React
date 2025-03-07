@@ -1,0 +1,74 @@
+@use "../../styles/main.scss" as *;
+
+.list-and-descr {
+	display: flex;
+	align-items: flex-start; /* Выравнивание по высоте контента */
+}
+
+.comics-descr {
+	@include flex;
+	max-width: 1100px;
+	margin: 0 auto;
+
+	&-img {
+		height: auto;
+		width: 293px;
+		margin-right: 50px;
+	}
+	&-right {
+		position: relative;
+		@include flex;
+		width: 753px;
+	}
+	&-right-info {
+		text-align: left;
+	}
+	&-right-title {
+		max-width: 550px;
+		@include mb(28px);
+		font-weight: 700;
+		font-size: 22px;
+		color: map-get($colors, "-black");
+	}
+	&-right-text {
+		@include mb(40px);
+		font-weight: 400;
+		font-size: 18px;
+		width: 550px;
+	}
+	&-right-pages {
+		@include mb(28px);
+		font-weight: 400;
+		font-size: 18px;
+	}
+	&-right-language {
+		@include mb(28px);
+		font-weight: 400;
+		font-size: 18px;
+	}
+	&-right-price {
+		font-weight: 700;
+		color: map-get($colors, "-red");
+		font-size: 24px;
+	}
+	.button-back {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-left: auto;
+		font-weight: 700;
+		font-size: 18px;
+	}
+}
+.page-not-found {
+	text-align: center;
+	font-weight: bold;
+	font-size: 24px;
+}
+.back-link {
+	display: "block";
+	text-align: "center";
+	font-weight: "bold";
+	font-size: "24px";
+	margin-top: "30px";
+}

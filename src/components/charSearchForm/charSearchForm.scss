@@ -1,0 +1,79 @@
+@use "../../styles/main.scss" as *;
+.search {
+  padding: 25px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+  background: map-get($colors, "-white");
+  width: 425px;
+  text-align: left;
+
+  &-form {
+    @include flex;
+
+    &-right {
+      margin-right: 25px;
+      text-align: left;
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 18px;
+      color: map-get($colors, "-black");
+      @include mb(18px);
+    }
+    &-input {
+      width: 250px;
+      height: 38px;
+      padding: 10px;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      background: map-get($colors, "-white");
+      @include mb(25px);
+    }
+    .button-find {
+      padding: 11px 18px;
+      font-weight: 400;
+      font-size: 14px;
+      color: map-get($colors, "-white");
+      background: map-get($colors, "-red");
+      border: none;
+      clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+      cursor: pointer;
+      height: 38px;
+      width: 101px;
+      margin-top: 40px;
+    }
+    .errorValidate {
+      font-weight: 700;
+      font-size: 18px;
+      color: map-get($colors, "-red");
+    }
+  }
+}
+
+.valid-success {
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-block {
+    font-weight: 700;
+    font-size: 18px;
+    color: map-get($colors, "-green");
+  }
+}
+.valid-failed-block {
+  font-weight: 700;
+  font-size: 18px;
+  color: map-get($colors, "-red");
+  margin-top: 10px;
+}
+.success-block-button {
+  width: 101px;
+  padding: 11px 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: map-get($colors, "-white");
+  border: none;
+  background: map-get($colors, "-gray");
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+  text-align: center;
+}

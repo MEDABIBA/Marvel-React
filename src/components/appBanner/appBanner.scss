@@ -1,0 +1,28 @@
+@use "../../styles/main.scss" as *;
+
+.comics-every-week {
+  @include flex;
+  height: 100px;
+  width: 1100px;
+  background-color: map-get($colors, "-gray-black");
+  margin: auto;
+  padding-left: 45px;
+  @include mb(45px);
+
+  .comics-every-week-left {
+    @include flex;
+
+    .img-marvel-hero {
+      margin-right: 83px;
+    }
+    .comics-every-week-text {
+      color: #ffffff;
+      align-content: center;
+    }
+  }
+
+  .img-marvel-avengers {
+    margin-left: auto;
+    margin-right: 25px;
+  }
+}

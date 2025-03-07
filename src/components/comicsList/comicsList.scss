@@ -1,0 +1,38 @@
+@use "../../styles/main.scss" as *;
+
+.list {
+  @include flex;
+  flex-wrap: wrap;
+  @include mb(67px);
+
+  &-item2 {
+    text-align: left;
+    max-width: 225px;
+    margin-right: 66px;
+    cursor: pointer;
+    @include mb(55px);
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 4) {
+      @include mb(0px);
+    }
+    .list-item-text2 {
+      font-weight: 700;
+      font-size: 14px;
+      color: map-get($colors, "-black");
+      max-width: 225px;
+      @include mb(7px);
+    }
+    .list-item-price {
+      font-weight: 700;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+    .list-item2-img {
+      width: 225px;
+      height: 346px;
+    }
+  }
+}

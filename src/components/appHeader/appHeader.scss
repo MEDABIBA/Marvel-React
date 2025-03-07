@@ -1,0 +1,28 @@
+@use "../../styles/main.scss" as *;
+
+.header {
+  @include flex;
+  @include mb(50px);
+
+  &-marvel {
+    color: map-get($colors, -black);
+    font-weight: 700;
+    font-size: 28px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  &-ul {
+    @include flex;
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 24px;
+
+    .link {
+      cursor: pointer;
+
+      .button-active {
+        color: map-get($colors, -red) !important;
+      }
+    }
+  }
+}

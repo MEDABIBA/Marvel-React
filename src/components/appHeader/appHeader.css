@@ -1,0 +1,82 @@
+@charset "UTF-8";
+.footer-btn {
+  padding: 11px 50px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  background-color: #9f0013;
+  border: none;
+  margin-left: auto;
+  -webkit-clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+          clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+
+.footer-btn:disabled {
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%); /* Позволяет затемнить кнопку, чтобы показать юзеру, что она нажата */
+}
+
+.footer-bck-img {
+  position: absolute;
+  right: -174px;
+  bottom: -70px;
+  z-index: -1;
+}
+
+.randomchar-block-right-btn-homepage {
+  padding: 11px 18px;
+  font-weight: 400;
+  font-size: 14px;
+  background: #9f0013;
+  border: none;
+  margin-right: 30px;
+  -webkit-clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+          clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+
+.randomchar-block-right-btn-homepage-a {
+  color: white;
+}
+
+.randomchar-block-right-btn-homepage-second {
+  padding: 11px 37px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  background: #9f0013;
+  border: none;
+  background: #5c5c5c;
+  -webkit-clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+          clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+.header-marvel {
+  color: #000;
+  font-weight: 700;
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.header-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 24px;
+}
+.header-ul .link {
+  cursor: pointer;
+}
+.header-ul .link .button-active {
+  color: #9f0013 !important;
+}

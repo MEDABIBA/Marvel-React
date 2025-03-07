@@ -1,0 +1,34 @@
+@use "../../styles/main.scss" as *;
+
+.list-ul {
+  width: 680px;
+  @include flex;
+  flex-wrap: wrap;
+  @include mb(15px);
+
+  .list-item {
+    background-color: map-get($colors, "-gray-black");
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+    height: 318px; /*  ТУТ */
+    width: 200px;
+    margin-right: 25px;
+    @include mb(30px);
+
+    &.char__item_selected {
+      box-shadow: 10px 10px 15px rgba(255, 0, 0, 0.5);
+    }
+    &-img {
+      @include mb(15px);
+      height: 200px;
+      width: 200px;
+    }
+    &-text {
+      font-weight: 700;
+      font-size: 22px;
+      color: map-get($colors, "-white");
+      width: 170px;
+      margin: 0 auto;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+.footer-btn {
+  padding: 11px 50px;
+  font-weight: 400;
+  font-size: 14px;
+  color: map-get($colors, "-white");
+  background-color: map-get($colors, "-red");
+  border: none;
+  margin-left: auto;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+.footer-btn:disabled {
+  filter: grayscale(50%); /* Позволяет затемнить кнопку, чтобы показать юзеру, что она нажата */
+}
+.footer-bck-img {
+  position: absolute;
+  right: -174px;
+  bottom: -70px;
+  z-index: -1;
+}
+.randomchar-block-right-btn-homepage,
+.randomchar-block-right-btn-homepage:link {
+  padding: 11px 18px;
+  font-weight: 400;
+  font-size: 14px;
+  background: map-get($colors, "-red");
+  color: map-get($colors, "-white");
+  border: none;
+  margin-right: 30px;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+.randomchar-block-right-btn-homepage-a {
+  color: white;
+}
+.randomchar-block-right-btn-homepage-second {
+  padding: 11px 37px;
+  font-weight: 400;
+  font-size: 14px;
+  background: map-get($colors, "-red");
+  color: map-get($colors, "-white");
+  border: none;
+  background: map-get($colors, "-gray");
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}

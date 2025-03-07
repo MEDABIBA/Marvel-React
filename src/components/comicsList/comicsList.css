@@ -1,0 +1,92 @@
+@charset "UTF-8";
+.footer-btn {
+  padding: 11px 50px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  background-color: #9f0013;
+  border: none;
+  margin-left: auto;
+  -webkit-clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+          clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+
+.footer-btn:disabled {
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%); /* Позволяет затемнить кнопку, чтобы показать юзеру, что она нажата */
+}
+
+.footer-bck-img {
+  position: absolute;
+  right: -174px;
+  bottom: -70px;
+  z-index: -1;
+}
+
+.randomchar-block-right-btn-homepage {
+  padding: 11px 18px;
+  font-weight: 400;
+  font-size: 14px;
+  background: #9f0013;
+  border: none;
+  margin-right: 30px;
+  -webkit-clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+          clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+
+.randomchar-block-right-btn-homepage-a {
+  color: white;
+}
+
+.randomchar-block-right-btn-homepage-second {
+  padding: 11px 37px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  background: #9f0013;
+  border: none;
+  background: #5c5c5c;
+  -webkit-clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+          clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  cursor: pointer;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 67px;
+}
+.list-item2 {
+  text-align: left;
+  max-width: 225px;
+  margin-right: 66px;
+  cursor: pointer;
+  margin-bottom: 55px;
+}
+.list-item2:nth-child(4n) {
+  margin-right: 0;
+}
+.list-item2:nth-last-child(-n+4) {
+  margin-bottom: 0px;
+}
+.list-item2 .list-item-text2 {
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+  max-width: 225px;
+  margin-bottom: 7px;
+}
+.list-item2 .list-item-price {
+  font-weight: 700;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.list-item2 .list-item2-img {
+  width: 225px;
+  height: 346px;
+}
